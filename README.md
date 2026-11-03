@@ -23,7 +23,7 @@ Aplicação móvel multiplataforma desenvolvida em **React Native (Expo)** para 
 
 ## Como Executar o Projeto
 
-1. Clone o repositório: `git clonegit clone [https://github.com/Daviw2/lista-compras-inteligente.git](https://github.com/Daviw2/lista-compras-inteligente.git)`
+1. Clone o repositório: `git clone https://github.com/Daviw2/lista-compras-inteligente.git`
 2. Instale as dependências: `npm install`
 3. Inicie o servidor de desenvolvimento: `npx expo start`
 4. Pressione `a` para abrir no emulador Android ou leia o código QR com a aplicação Expo Go.
