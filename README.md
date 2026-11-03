@@ -1,56 +1,29 @@
-# Welcome to your Expo app 👋
+# Lista de Compras Inteligente
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicação móvel multiplataforma desenvolvida em **React Native (Expo)** para gestão de compras de supermercado em tempo real, com categorização por secções e persistência de dados local.
 
-## Get started
+## Tecnologias Utilizadas
 
-1. Install dependencies
+- **Framework Base:** React Native com Expo SDK 57
+- **Navegação:** Expo Router (File-based routing em abas)
+- **Gestão de Estado:** React Hooks (`useState` e `useEffect`)
+- **Persistência Nativa:** `@react-native-async-storage/async-storage`
 
-   ```bash
-   npm install
-   ```
+## Funcionalidades Implementadas
 
-2. Start the app
+- **Organização por Secções:** Classificação de itens por corredores do supermercado (_Mercearia, Hortifruti, Carnes, Limpeza, Padaria_) com ordenação alfabética automática.
+- **Controlo de Estado (Pendente / No Carrinho):** Movimentação rápida de itens com feedback visual imediato.
+- **Cálculo em Tempo Real:** Soma dinâmica do valor total acumulado dos produtos que estão no carrinho.
+- **Armazenamento Offline:** Gravação automática da lista na memória interna do dispositivo.
 
-   ```bash
-   npx expo start
-   ```
+## Arquitetura e Decisões Técnicas
 
-In the output, you'll find options to open the app in a
+- **Fluxo de Dados Reativo:** Utilização do `useEffect` monitorizando a matriz principal de itens para acionar a gravação assíncrona no `AsyncStorage` a cada alteração.
+- **Renderização Otimizada:** Uso do componente `FlatList` para garantir fluidez na rolagem das listas de itens pendentes e concluídos.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Como Executar o Projeto
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1. Clone o repositório: `git clonegit clone [https://github.com/Daviw2/lista-compras-inteligente.git](https://github.com/Daviw2/lista-compras-inteligente.git)`
+2. Instale as dependências: `npm install`
+3. Inicie o servidor de desenvolvimento: `npx expo start`
+4. Pressione `a` para abrir no emulador Android ou leia o código QR com a aplicação Expo Go.
